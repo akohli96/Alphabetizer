@@ -1,7 +1,5 @@
 install: gradle wrapper --gradle-version 4.10.3
 
-script: gradle build
-
 language: java
 
 before_cache:
@@ -12,6 +10,12 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+
+before_script:
+  - chmod +x gradlew
+
+script:
+  - gradle build
 
 jdk:
   - oraclejdk8
