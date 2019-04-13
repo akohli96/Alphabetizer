@@ -3,6 +3,8 @@ plugins {
     id 'application'
 }
 
+apply plugin: 'jacoco'
+
 mainClassName = 'App'
 
 dependencies {
