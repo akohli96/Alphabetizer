@@ -1,7 +1,7 @@
 language: java
 
 before_install:
-  gradle -b wrapper.gradle wrapper
+  gradle -b build.gradle wrapper
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
