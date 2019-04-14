@@ -1,4 +1,4 @@
-package core;
+package server.core;
 
 import org.junit.Before;
 import org.junit.Test;

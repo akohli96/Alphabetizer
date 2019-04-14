@@ -14,7 +14,7 @@ Build automation : Gradle
 
 ## Core algorithm
 
-All the core logic can be found in the [core directory](https://github.com/akohli96/Alphabetizer/tree/master/src/main/java/core)
+All the server.core logic can be found in the [server.core directory](https://github.com/akohli96/Alphabetizer/tree/master/src/main/java/server.core)
 but essentially inbuilt java features are used to sanitize the input before running it through a comparator.
 
 ### Thought process

@@ -13,7 +13,7 @@ Starting a Gradle Daemon, 3 busy and 1 incompatible Daemons could not be reused,
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: other.AlphabetizerApplication.alphabetizerNormal
+# Benchmark: other.server.core.AlphabetizerApplication.alphabetizerNormal
 # Parameters: (N = 10000000)
 
 # Run progress: 0.00% complete, ETA 00:03:20
@@ -30,7 +30,7 @@ Iteration   4: 29876.151 ms/op
 Iteration   5: 30021.053 ms/op
 
 
-Result "other.AlphabetizerApplication.alphabetizerNormal":
+Result "other.server.core.AlphabetizerApplication.alphabetizerNormal":
   29874.776 �(99.9%) 1384.189 ms/op [Average]
   (min, avg, max) = (29515.098, 29874.776, 30395.295), stdev = 359.470
   CI (99.9%): [28490.587, 31258.966] (assumes normal distribution)
@@ -45,7 +45,7 @@ Result "other.AlphabetizerApplication.alphabetizerNormal":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: other.AlphabetizerApplication.alphabetizerStream
+# Benchmark: other.server.core.AlphabetizerApplication.alphabetizerStream
 # Parameters: (N = 10000000)
 
 # Run progress: 50.00% complete, ETA 00:04:56
@@ -62,7 +62,7 @@ Iteration   4: 29203.738 ms/op
 Iteration   5: 29458.335 ms/op
 
 
-Result "other.AlphabetizerApplication.alphabetizerStream":
+Result "other.server.core.AlphabetizerApplication.alphabetizerStream":
   29463.600 �(99.9%) 671.300 ms/op [Average]
   (min, avg, max) = (29203.738, 29463.600, 29691.875), stdev = 174.334
   CI (99.9%): [28792.300, 30134.899] (assumes normal distribution)
@@ -77,8 +77,8 @@ the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from th
 Do not assume the numbers tell you what you want them to tell.
 
 Benchmark                    (N)  Mode  Cnt      Score      Error  Units
-AlphabetizerApplication.alphabetizerNormal  10000000  avgt    5  29874.776 � 1384.189  ms/op
-AlphabetizerApplication.alphabetizerStream  10000000  avgt    5  29463.600 �  671.300  ms/op
+server.core.AlphabetizerApplication.alphabetizerNormal  10000000  avgt    5  29874.776 � 1384.189  ms/op
+server.core.AlphabetizerApplication.alphabetizerStream  10000000  avgt    5  29463.600 �  671.300  ms/op
 
 BUILD SUCCESSFUL in 10m 18s
 3 actionable tasks: 3 executed

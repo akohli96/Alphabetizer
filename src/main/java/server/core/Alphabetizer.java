@@ -1,4 +1,4 @@
-package core;
+package server.core;
 
 public class Alphabetizer {
 
