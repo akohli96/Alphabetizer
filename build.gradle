@@ -11,6 +11,10 @@ application {
     mainClassName = applicationName
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.3'
+}
+
 jar {
     manifest {
         attributes(
