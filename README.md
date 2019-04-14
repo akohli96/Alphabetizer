@@ -40,8 +40,7 @@ Hence, Character>char.
 
 ## How do I build and run it?
 
-```
-bash
+```bash
 git clone https://github.com/akohli96/Alphabetizer.git
 cd Alphabetizer
 ./gradlew clean build #This should build it
