@@ -3,7 +3,7 @@ package core;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
+import static org.hamcrest.junit.MatcherAssert.assertThat;
 
 public class AlphabetizerTest {
 
