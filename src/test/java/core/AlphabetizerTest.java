@@ -9,7 +9,7 @@ public class AlphabetizerTest {
 
     private static final String VIRGINIA_TECH = "VirginiaTech";
     private static final String BLIND_MICE = "3 Blind Mice";
-    private static final String SAME_LETTER_DIFFERENT_CASE = "BbBbaAaA";
+    private static final String SAME_LETTER_DIFFERENT_CASE = "BBbbaaAA";
     private static final String ONE_CHARACTER = "V";
     private static final String EMPTY_STRING = "";
 
@@ -20,7 +20,7 @@ public class AlphabetizerTest {
 
     @Test
     public void alphabetizeShouldNotAlterTheOrderOfSameCharacters(){
-        assertThat(Alphabetizer.alphabetize(SAME_LETTER_DIFFERENT_CASE),equalTo("BbBbaAaA"));
+        assertThat(Alphabetizer.alphabetize(SAME_LETTER_DIFFERENT_CASE),equalTo("aaAABBbb"));
     }
 
     @Test
