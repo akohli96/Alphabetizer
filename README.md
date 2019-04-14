@@ -9,7 +9,9 @@
 ## Technical aspects
 
 Programming language : Java
+
 Continuous integration : Travis-CI
+
 Build automation : Gradle
 
 ## Core algorithm
@@ -26,9 +28,14 @@ I decided to take matters in my own hands and used [JMH](https://openjdk.java.ne
 I found that [streams were faster(marginally)](https://github.com/akohli96/Alphabetizer/blob/master/src/main/resources/performance.txt) so I went ahead and used steams.
 
 #### Why Character over char?
-The ```java Character class``` is an object where is ```char``` is simply a primitive meaning that using primitives would be less computationally exception.
-However, using simply ```java char``` I would not be able to use streams without converting them to Characters.
-Well, even if I did not use streams the inbuilt libraries would not allow for sorting chars as per the use case implying I would have to spin out my own sorting algorithm essentially reinventing the wheel which I did not want to do either.
+The ```Character class``` is an object where is ```char``` is simply a primitive meaning that using primitives would be less computationally exception.
+However, using simply ```char``` I would not be able to use streams without converting them to Characters.
+Well, lets pretend I did not use streams. Even then I would not be able to use the inbuilt libraries would not allow for sorting characters as per the use case. I did think of the below
+``` java
+Arays.sort(charArray)
+```
+but that would not take into account case insensitivity and comparators do not work with primitives. I could have built my own sorting algorithm that could store additional information in a hashmap of whether something is capital or not and then do a final write on the return but that would bring me into [premature optimization](https://stackify.com/premature-optimization-evil/) teritory which I wanted to avoid.
+
 Hence, Character>char.
 
 ## How do I build and run it?
