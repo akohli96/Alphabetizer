@@ -1,6 +1,7 @@
-install: gradle wrapper --gradle-version 4.10.3
-
 language: java
+
+before_install:
+  gradle -b wrapper.gradle wrapper
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -15,7 +16,7 @@ before_script:
   - chmod +x gradlew
 
 script:
-  - gradle build
+  - ./gradlew build
 
 jdk:
   - oraclejdk8
