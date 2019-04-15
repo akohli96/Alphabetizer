@@ -20,6 +20,7 @@ def protocV = '3.6.0'
 def jUnitV = '4.1.2'
 def hamcrestV = '1.3'
 
+//protobuf specific
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:${protocV}"
@@ -61,6 +62,7 @@ idea {
     }
 }
 
+//custom tasks
 task runServer(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'server.AlphabetizerServer'
@@ -73,6 +75,7 @@ task runClient(type: JavaExec) {
 
 startScripts.enabled = false
 
+//custom start scripts
 task alphabetizerServer(type: CreateStartScripts) {
     mainClassName = "server.AlphabetizerServer"
     applicationName = "alphabetizer-server"
