@@ -43,6 +43,7 @@ Hence, Character>char.
 ```bash
 git clone https://github.com/akohli96/Alphabetizer.git
 cd Alphabetizer
-./gradlew clean build #This should build it
-java -jar build/libs/Alphabetizer.jar 'input1' 'input2'
+./gradlew clean build 
+./gradlew runServer
+./gradlew runClient --args="'InputString' 'AnotherString'" #Different window
 ```
