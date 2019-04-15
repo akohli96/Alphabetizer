@@ -1,4 +1,4 @@
-language: java
+language: java8
 
 before_install:
   gradle -b wrapper.gradle wrapper
