@@ -32,11 +32,11 @@ I found that [streams were faster(marginally)](src/main/resources/performance.tx
 #### Why Character over char?
 The ```Character class``` is an object where is ```char``` is simply a primitive meaning that using primitives would be less computationally expensive.
 However, using simply ```char``` I would not be able to use streams without converting them to Characters.
-Well, lets pretend I did not use streams. Even then I would not be able to use the inbuilt libraries would not allow for sorting characters as per the use case. I did think of the below
+Well, lets pretend I did not use streams. Even then I would not be able to use the inbuilt libraries as they would not allow for sorting characters as per the use case. I did think of the below
 ``` java
 Arays.sort(charArray)
 ```
-but that would not take into account case insensitivity and comparators do not work with primitives. I could have built my own sorting algorithm that could store additional information in a hashmap of whether something is capital or not and then do a final write on the return String but that would bring me into [premature optimization](https://stackify.com/premature-optimization-evil/) teritory which I wanted to avoid. I avoided using ```parallel streams``` for the same reason.
+but that would not take into account case insensitivity and comparators do not work with primitives. I could have built my own sorting algorithm that could store additional information in a hashmap of whether something is capital or not and then do a final write on the return String but that was bringing me into the [premature optimization](https://stackify.com/premature-optimization-evil/) territory which I wanted to avoid. I avoided using ```parallel streams``` for the same reason.
 
 Hence, Character>char.
 
@@ -57,7 +57,7 @@ In this case, both the [server](src/main/java/server) and the [client](src/main/
 
 #### How to utilize it once code is generated?
 The server application implements the [service interfaces](src/main/java/server/grpc/AlphabetizeGrpcImpl.java) and the [client application](src/main/java/client/grpc/AlphabetizerClient.java) makes remote calls to it, that is all :smile:. 
-Note : The compiler does generate a fair amount of code which is nicely tucked away in the [generated directory](src/generated).
+Note : The compiler does generate a fair amount of code which is nicely tucked away in the [generated directory](src/generated) which I have left untouched.
 There was some custom tasks written in the [build.gradle](build.gradle) to easily work with gRPC as well.
 ## How do I build and run it?
 
