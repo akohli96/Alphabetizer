@@ -3,13 +3,17 @@
 
 package io.alphabetizer.alphabetize.grpc;
 
-public interface AlphabetizeResponseOrBuilder
-    extends
+public interface AlphabetizeResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:AlphabetizeResponse)
     com.google.protobuf.MessageOrBuilder {
 
-  /** <code>string output = 1;</code> */
+  /**
+   * <code>string output = 1;</code>
+   */
   java.lang.String getOutput();
-  /** <code>string output = 1;</code> */
-  com.google.protobuf.ByteString getOutputBytes();
+  /**
+   * <code>string output = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getOutputBytes();
 }

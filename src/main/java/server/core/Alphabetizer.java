@@ -2,10 +2,10 @@ package server.core;
 
 public class Alphabetizer {
 
-  private Alphabetizer() {}
-
   private static final CustomCharacterComparator CUSTOM_CHARACTER_COMPARATOR =
       new CustomCharacterComparator();
+
+  private Alphabetizer() {}
 
   public static String alphabetize(String input) {
     if (input.length() < 2) {

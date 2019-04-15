@@ -16,8 +16,7 @@ public class AlphabetizerClientApplication {
       System.exit(1);
     }
 
-    AlphabetizerClient alphabetizerClient =
-        AlphabetizerClient.createClient(Constants.ADDRESS, Constants.PORT);
+    AlphabetizerClient alphabetizerClient = AlphabetizerClient.createClient(Constants.ADDRESS, Constants.PORT);
 
     logger.info("Client created");
     try {

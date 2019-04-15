@@ -9,12 +9,10 @@ import server.core.Alphabetizer;
 public class AlphabetizeGrpcImpl extends AlphabetizeGrpc.AlphabetizeImplBase {
 
   @Override
-  public void alphabetize(
-      AlphabetizeRequest request, StreamObserver<AlphabetizeResponse> responseObserver) {
-    AlphabetizeResponse response =
-        AlphabetizeResponse.newBuilder()
-            .setOutput(Alphabetizer.alphabetize(request.getInput()))
-            .build();
+  public void alphabetize(AlphabetizeRequest request, StreamObserver<AlphabetizeResponse> responseObserver) {
+    AlphabetizeResponse response = AlphabetizeResponse.newBuilder()
+                                    .setOutput(Alphabetizer.alphabetize(request.getInput()))
+                                    .build();
     responseObserver.onNext(response);
     responseObserver.onCompleted();
   }

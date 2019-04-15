@@ -12,13 +12,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AlphabetizerClient {
-  private static final Logger logger =
-      Logger.getLogger(AlphabetizerClientApplication.class.getName());
-
-  private final ManagedChannel channel;
-  private AlphabetizeGrpc.AlphabetizeBlockingStub blockingStub;
+  private static final Logger logger = Logger.getLogger(AlphabetizerClientApplication.class.getName());
   private static final int TIMEOUT = 5;
   private static final String ERROR = "Failed trying to alphabetize input";
+  private final ManagedChannel channel;
+  private AlphabetizeGrpc.AlphabetizeBlockingStub blockingStub;
 
   private AlphabetizerClient(String hostname, int port) {
     channel = ManagedChannelBuilder.forAddress(hostname, port).usePlaintext().build();

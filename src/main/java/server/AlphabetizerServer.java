@@ -13,8 +13,9 @@ public class AlphabetizerServer {
 
   public static void main(String[] args) throws IOException, InterruptedException {
 
-    Server server =
-        ServerBuilder.forPort(Constants.PORT).addService(new AlphabetizeGrpcImpl()).build();
+    Server server = ServerBuilder.forPort(Constants.PORT)
+                      .addService(new AlphabetizeGrpcImpl())
+                      .build();
 
     logger.info("Starting server...");
     server.start();

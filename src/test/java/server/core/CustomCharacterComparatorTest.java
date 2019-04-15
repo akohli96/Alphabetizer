@@ -9,12 +9,11 @@ import static org.hamcrest.Matchers.lessThan;
 
 public class CustomCharacterComparatorTest {
 
-  private CustomCharacterComparator comparator;
-
   private static final Character charALowecase = 'a';
   private static final Character charAUppercase = 'A';
   private static final Character charZLowecase = 'z';
   private static final Character charZUppercase = 'Z';
+  private CustomCharacterComparator comparator;
 
   @Before
   public void setUp() {
