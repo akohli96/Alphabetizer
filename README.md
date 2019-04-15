@@ -58,7 +58,7 @@ In this case, both the [server](src/main/java/server) and the [client](src/main/
 #### How to utilize it once code is generated?
 The server application implements the [service interfaces](src/main/java/server/grpc/AlphabetizeGrpcImpl.java) and the [client application](src/main/java/client/grpc/AlphabetizerClient.java) makes remote calls to it, that is all :smile:. 
 Note : The compiler does generate a fair amount of code which is nicely tucked away in the [generated directory](src/generated) which I have left untouched.
-There was some custom tasks written in the [build.gradle](build.gradle) to easily work with gRPC as well.
+There were some custom tasks written in the [build.gradle](build.gradle) to easily work with gRPC as well.
 ## How do I build and run it?
 
 Please ensure you have [Java 8 SDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed to ensure it will build on your machine.
