@@ -48,6 +48,7 @@ dependencies {
     compile group: 'io.grpc', name: 'grpc-all', version: grpcV
     testCompile group: 'junit', name: 'junit', version: jUnitV
     testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: hamcrestV
+    testImplementation group: 'io.grpc', name: 'grpc-testing', version: grpcV
 }
 
 idea {
