@@ -5,13 +5,14 @@ option java_outer_classname = "AlphabetizeProto";
 option java_package = "io.alphabetizer.alphabetize.grpc";
 
 service Alphabetize {
-  rpc alphabetize (AlphabetizeRequest) returns (AlphabetizeResponse) {}
+    rpc alphabetize (AlphabetizeRequest) returns (AlphabetizeResponse) {
+    }
 }
 
 message AlphabetizeRequest {
-  string input = 1;
+    string input = 1;
 }
 
 message AlphabetizeResponse {
-  string output = 1;
+    string output = 1;
 }

@@ -1,22 +1,13 @@
 package io.alphabetizer.alphabetize.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.12.0)",
     comments = "Source: alphabetize.proto")
@@ -28,46 +19,62 @@ public final class AlphabetizeGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getAlphabetizeMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
-      io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> METHOD_ALPHABETIZE = getAlphabetizeMethodHelper();
+  @java.lang.Deprecated // Use {@link #getAlphabetizeMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+          io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+      METHOD_ALPHABETIZE = getAlphabetizeMethodHelper();
 
-  private static volatile io.grpc.MethodDescriptor<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
-      io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> getAlphabetizeMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+          io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+      getAlphabetizeMethod;
 
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static io.grpc.MethodDescriptor<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
-      io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> getAlphabetizeMethod() {
+  public static io.grpc.MethodDescriptor<
+          io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+          io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+      getAlphabetizeMethod() {
     return getAlphabetizeMethodHelper();
   }
 
-  private static io.grpc.MethodDescriptor<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
-      io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> getAlphabetizeMethodHelper() {
-    io.grpc.MethodDescriptor<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest, io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> getAlphabetizeMethod;
+  private static io.grpc.MethodDescriptor<
+          io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+          io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+      getAlphabetizeMethodHelper() {
+    io.grpc.MethodDescriptor<
+            io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+            io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+        getAlphabetizeMethod;
     if ((getAlphabetizeMethod = AlphabetizeGrpc.getAlphabetizeMethod) == null) {
       synchronized (AlphabetizeGrpc.class) {
         if ((getAlphabetizeMethod = AlphabetizeGrpc.getAlphabetizeMethod) == null) {
-          AlphabetizeGrpc.getAlphabetizeMethod = getAlphabetizeMethod = 
-              io.grpc.MethodDescriptor.<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest, io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "Alphabetize", "alphabetize"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.alphabetizer.alphabetize.grpc.AlphabetizeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.alphabetizer.alphabetize.grpc.AlphabetizeResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AlphabetizeMethodDescriptorSupplier("alphabetize"))
-                  .build();
-          }
+          AlphabetizeGrpc.getAlphabetizeMethod =
+              getAlphabetizeMethod =
+                  io.grpc.MethodDescriptor
+                      .<io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+                          io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName("Alphabetize", "alphabetize"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              io.alphabetizer.alphabetize.grpc.AlphabetizeRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              io.alphabetizer.alphabetize.grpc.AlphabetizeResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new AlphabetizeMethodDescriptorSupplier("alphabetize"))
+                      .build();
         }
-     }
-     return getAlphabetizeMethod;
+      }
+    }
+    return getAlphabetizeMethod;
   }
 
-  /**
-   * Creates a new async stub that supports all call types for the service
-   */
+  /** Creates a new async stub that supports all call types for the service */
   public static AlphabetizeStub newStub(io.grpc.Channel channel) {
     return new AlphabetizeStub(channel);
   }
@@ -75,118 +82,113 @@ public final class AlphabetizeGrpc {
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static AlphabetizeBlockingStub newBlockingStub(
-      io.grpc.Channel channel) {
+  public static AlphabetizeBlockingStub newBlockingStub(io.grpc.Channel channel) {
     return new AlphabetizeBlockingStub(channel);
   }
 
-  /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
-   */
-  public static AlphabetizeFutureStub newFutureStub(
-      io.grpc.Channel channel) {
+  /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
+  public static AlphabetizeFutureStub newFutureStub(io.grpc.Channel channel) {
     return new AlphabetizeFutureStub(channel);
   }
 
-  /**
-   */
-  public static abstract class AlphabetizeImplBase implements io.grpc.BindableService {
+  /** */
+  public abstract static class AlphabetizeImplBase implements io.grpc.BindableService {
 
-    /**
-     */
-    public void alphabetize(io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request,
-        io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> responseObserver) {
+    /** */
+    public void alphabetize(
+        io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request,
+        io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getAlphabetizeMethodHelper(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override
+    public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getAlphabetizeMethodHelper(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
-                io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>(
-                  this, METHODID_ALPHABETIZE)))
+              getAlphabetizeMethodHelper(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      io.alphabetizer.alphabetize.grpc.AlphabetizeRequest,
+                      io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>(
+                      this, METHODID_ALPHABETIZE)))
           .build();
     }
   }
 
-  /**
-   */
+  /** */
   public static final class AlphabetizeStub extends io.grpc.stub.AbstractStub<AlphabetizeStub> {
     private AlphabetizeStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private AlphabetizeStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private AlphabetizeStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AlphabetizeStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AlphabetizeStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AlphabetizeStub(channel, callOptions);
     }
 
-    /**
-     */
-    public void alphabetize(io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request,
-        io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> responseObserver) {
+    /** */
+    public void alphabetize(
+        io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request,
+        io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+            responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getAlphabetizeMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAlphabetizeMethodHelper(), getCallOptions()),
+          request,
+          responseObserver);
     }
   }
 
-  /**
-   */
-  public static final class AlphabetizeBlockingStub extends io.grpc.stub.AbstractStub<AlphabetizeBlockingStub> {
+  /** */
+  public static final class AlphabetizeBlockingStub
+      extends io.grpc.stub.AbstractStub<AlphabetizeBlockingStub> {
     private AlphabetizeBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private AlphabetizeBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private AlphabetizeBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AlphabetizeBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AlphabetizeBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AlphabetizeBlockingStub(channel, callOptions);
     }
 
-    /**
-     */
-    public io.alphabetizer.alphabetize.grpc.AlphabetizeResponse alphabetize(io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request) {
+    /** */
+    public io.alphabetizer.alphabetize.grpc.AlphabetizeResponse alphabetize(
+        io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request) {
       return blockingUnaryCall(
           getChannel(), getAlphabetizeMethodHelper(), getCallOptions(), request);
     }
   }
 
-  /**
-   */
-  public static final class AlphabetizeFutureStub extends io.grpc.stub.AbstractStub<AlphabetizeFutureStub> {
+  /** */
+  public static final class AlphabetizeFutureStub
+      extends io.grpc.stub.AbstractStub<AlphabetizeFutureStub> {
     private AlphabetizeFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private AlphabetizeFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private AlphabetizeFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AlphabetizeFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AlphabetizeFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AlphabetizeFutureStub(channel, callOptions);
     }
 
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse> alphabetize(
-        io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request) {
+    /** */
+    public com.google.common.util.concurrent.ListenableFuture<
+            io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>
+        alphabetize(io.alphabetizer.alphabetize.grpc.AlphabetizeRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getAlphabetizeMethodHelper(), getCallOptions()), request);
     }
@@ -194,11 +196,11 @@ public final class AlphabetizeGrpc {
 
   private static final int METHODID_ALPHABETIZE = 0;
 
-  private static final class MethodHandlers<Req, Resp> implements
-      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+  private static final class MethodHandlers<Req, Resp>
+      implements io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
     private final AlphabetizeImplBase serviceImpl;
     private final int methodId;
 
@@ -212,8 +214,10 @@ public final class AlphabetizeGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ALPHABETIZE:
-          serviceImpl.alphabetize((io.alphabetizer.alphabetize.grpc.AlphabetizeRequest) request,
-              (io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>) responseObserver);
+          serviceImpl.alphabetize(
+              (io.alphabetizer.alphabetize.grpc.AlphabetizeRequest) request,
+              (io.grpc.stub.StreamObserver<io.alphabetizer.alphabetize.grpc.AlphabetizeResponse>)
+                  responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -231,8 +235,9 @@ public final class AlphabetizeGrpc {
     }
   }
 
-  private static abstract class AlphabetizeBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+  private abstract static class AlphabetizeBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier,
+          io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     AlphabetizeBaseDescriptorSupplier() {}
 
     @java.lang.Override
@@ -274,10 +279,12 @@ public final class AlphabetizeGrpc {
       synchronized (AlphabetizeGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
-          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AlphabetizeFileDescriptorSupplier())
-              .addMethod(getAlphabetizeMethodHelper())
-              .build();
+          serviceDescriptor =
+              result =
+                  io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+                      .setSchemaDescriptor(new AlphabetizeFileDescriptorSupplier())
+                      .addMethod(getAlphabetizeMethodHelper())
+                      .build();
         }
       }
     }
