@@ -34,7 +34,7 @@ Well, lets pretend I did not use streams. Even then I would not be able to use t
 ``` java
 Arays.sort(charArray)
 ```
-but that would not take into account case insensitivity and comparators do not work with primitives. I could have built my own sorting algorithm that could store additional information in a hashmap of whether something is capital or not and then do a final write on the return String but that would bring me into [premature optimization](https://stackify.com/premature-optimization-evil/) teritory which I wanted to avoid. I avoided using ```,parallel``` for the same reason.
+but that would not take into account case insensitivity and comparators do not work with primitives. I could have built my own sorting algorithm that could store additional information in a hashmap of whether something is capital or not and then do a final write on the return String but that would bring me into [premature optimization](https://stackify.com/premature-optimization-evil/) teritory which I wanted to avoid. I avoided using ```parallel streams``` for the same reason.
 
 Hence, Character>char.
 
