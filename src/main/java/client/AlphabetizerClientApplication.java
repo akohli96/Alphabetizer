@@ -4,9 +4,10 @@ import client.grpc.AlphabetizerClient;
 import common.Constants;
 import io.alphabetizer.alphabetize.grpc.AlphabetizeResponse;
 
-import static io.grpc.okhttp.internal.Platform.logger;
+import java.util.logging.Logger;
 
 public class AlphabetizerClientApplication {
+    private static final Logger logger = Logger.getLogger(AlphabetizerClientApplication.class.getName());
 
     public static void main(String[] args) throws Exception{
         if(args.length<1){
