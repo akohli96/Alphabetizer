@@ -1,6 +1,8 @@
 # Alphabetizer
 
  Alphabetizer simply alphabetizes :smile:
+ 
+[![Build Status](https://travis-ci.com/akohli96/Alphabetizer.svg?branch=master)](https://travis-ci.com/akohli96/Alphabetizer)
 
 ## Introduction
 
@@ -59,6 +61,8 @@ The server application implements the service interfaces and the client applicat
 There was some custom tasks written in the [build.gradle](build.gradle) to easily work with gRPC.
 ## How do I build and run it?
 
+Please ensure you have [Java 8 SDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed to ensure it will build on your machine.
+Instructions below:
 ```bash
 git clone https://github.com/akohli96/Alphabetizer.git
 cd Alphabetizer
