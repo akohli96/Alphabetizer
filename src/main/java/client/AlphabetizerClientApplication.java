@@ -11,7 +11,7 @@ public class AlphabetizerClientApplication {
       Logger.getLogger(AlphabetizerClientApplication.class.getName());
 
   public static void main(String[] args) throws Exception {
-    if (args.length < 1) {
+    if (args.length < 1) { //check to prevent code from going further if no parameters specified
       logger.warning("Need to run client with atleast one parameter");
       System.exit(1);
     }
@@ -21,7 +21,7 @@ public class AlphabetizerClientApplication {
     logger.info("Client created");
     try {
       for (String argument : args) {
-        AlphabetizeResponse alphabetize = alphabetizerClient.alphabetize(argument);
+        AlphabetizeResponse alphabetize = alphabetizerClient.alphabetize(argument); // client runs the function
         System.out.println(alphabetize.getOutput());
       }
     } finally {

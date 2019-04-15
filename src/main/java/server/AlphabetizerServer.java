@@ -13,6 +13,7 @@ public class AlphabetizerServer {
 
   public static void main(String[] args) throws IOException, InterruptedException {
 
+    //build the server with AlphabetizeService added to it
     Server server = ServerBuilder.forPort(Constants.PORT)
                       .addService(new AlphabetizeGrpcImpl())
                       .build();

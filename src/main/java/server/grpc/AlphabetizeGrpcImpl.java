@@ -8,12 +8,17 @@ import server.core.Alphabetizer;
 
 public class AlphabetizeGrpcImpl extends AlphabetizeGrpc.AlphabetizeImplBase {
 
+  /*
+  Input : Alphabetize request and the responseObserver
+  Output : Nothing
+  Actually calls the alphabetize method.
+  */
   @Override
   public void alphabetize(AlphabetizeRequest request, StreamObserver<AlphabetizeResponse> responseObserver) {
     AlphabetizeResponse response = AlphabetizeResponse.newBuilder()
                                     .setOutput(Alphabetizer.alphabetize(request.getInput()))
                                     .build();
-    responseObserver.onNext(response);
-    responseObserver.onCompleted();
+    responseObserver.onNext(response); //used to return response
+    responseObserver.onCompleted(); //used to specify that RPC call is finished.
   }
 }
