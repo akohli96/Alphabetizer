@@ -85,4 +85,4 @@ cd Alphabetizer
 
 1. I would have created a library out of [alphabetize](src/main/java/server/core) first and then imported that into the server code.
 2. I would have deployed the server as a [docker](https://www.docker.com/) container.
-3. I would have used [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) to make it my code [easier to test](src/test/java).
+3. I would have used [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) to make my code [easier to test](src/test/java).
