@@ -17,6 +17,8 @@ before_script:
 
 script:
   - ./gradlew build
+  - ./gradlew runServer &
+  - ./gradlew runClient --args='testString'
 
 jdk:
   - oraclejdk8
